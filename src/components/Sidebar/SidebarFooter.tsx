@@ -21,15 +21,21 @@ export default function SidebarFooterComponet(): JSX.Element {
                 <ChevronUp className="ml-auto" />
               </SidebarMenuButton>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
+            <DropdownMenuContent className="border-none" align="end">
               <DropdownMenuItem onClick={() => setTheme("light")}>
-                Light
+                <SidebarMenuButton>
+                  Light
+                </SidebarMenuButton>
               </DropdownMenuItem>
               <DropdownMenuItem onClick={() => setTheme("dark")}>
-                Dark
+                <SidebarMenuButton>
+                  Dark
+                </SidebarMenuButton>
               </DropdownMenuItem>
               <DropdownMenuItem onClick={() => setTheme("system")}>
-                System
+                <SidebarMenuButton>
+                  System
+                </SidebarMenuButton>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>

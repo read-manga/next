@@ -1,4 +1,5 @@
 import { SidebarComponent } from "@/components/Sidebar";
+import { SidebarProvider, Sidebar, SidebarInset } from "@/components/ui/sidebar";
 import { JSX, ReactNode } from "react";
 
 /**
@@ -17,12 +18,21 @@ interface PropsLayoutApp {
 export default function LayoutApp({ children }: PropsLayoutApp): JSX.Element {
   return (
     <div>
-      <SidebarComponent.Root>
-        <SidebarComponent.Head />
-        <SidebarComponent.Context />
-        <SidebarComponent.Footer />
-      </SidebarComponent.Root>
-      {children}
+      <SidebarProvider>
+        <SidebarComponent.Root variant="floating" side="left">
+          <SidebarComponent.Head />
+          <SidebarComponent.Context />
+          <SidebarComponent.Footer />
+        </SidebarComponent.Root>
+        <SidebarInset>
+          <main>
+            {children}
+            <SidebarComponent.Root variant="sidebar" side="right">
+              a
+            </SidebarComponent.Root>
+          </main>
+        </SidebarInset>
+      </SidebarProvider>
     </div>
   );
 }

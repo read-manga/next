@@ -1,16 +1,16 @@
 import { JSX, ReactNode } from "react";
-import { SidebarHeader, Sidebar, SidebarProvider } from "@/components/ui/sidebar";
+import { Sidebar, SidebarProvider, SidebarInset } from "@/components/ui/sidebar";
 
 interface PropsNavabarRoot {
   children: ReactNode;
+  variant?: "sidebar" | "floating" | "inset" | undefined,
+  side?: "left" | "right" | undefined,
 }
 
-export default function SidebarRoot({ children }: PropsNavabarRoot): JSX.Element {
+export default function SidebarRoot({ children, variant, side }: PropsNavabarRoot): JSX.Element {
   return (
-    <SidebarProvider>
-      <Sidebar>
-        {children}
-      </Sidebar>
-    </SidebarProvider>
+    <Sidebar variant={variant} side={side}>
+      {children}
+    </Sidebar>
   );
 }
