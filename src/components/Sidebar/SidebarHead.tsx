@@ -7,7 +7,7 @@ export default function SidebarHead(): JSX.Element {
       <SidebarMenu>
         <SidebarMenuItem>
           <SidebarMenuButton className="py-4 px-2">
-            <h1 className="uppercase whitespace-nowrap py-2 px-2 w-full text-center text-xl font-bold">Read Manga</h1>
+            <h1 className="mouseevent-none uppercase whitespace-nowrap py-2 px-2 w-full text-center text-xl font-bold">Read Manga</h1>
           </SidebarMenuButton>
         </SidebarMenuItem>
       </SidebarMenu>

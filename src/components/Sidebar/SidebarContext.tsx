@@ -1,10 +1,16 @@
+'use client';
+
 import { JSX, ReactNode } from "react";
 import { SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarMenuAction, SidebarMenuButton, SidebarMenuItem, SidebarMenuSub } from "@/components/ui/sidebar";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { ChevronDown, HouseIcon } from "lucide-react";
 import { data, PropsItem, PropsListContext, PropsSub } from "@/utils/dateSidebarContext";
+import { PropsSidebarContext } from "@/types/context";
+//import { useParams } from "next/navigation";
 
-export default function SidebarContext(): JSX.Element {
+export default function SidebarContext({ name, itemSub }: PropsSidebarContext): JSX.Element {
+  //const { id } = useParams();
+
   return (
     <SidebarContent>
       {data.map((context: PropsListContext) => (
@@ -17,7 +23,7 @@ export default function SidebarContext(): JSX.Element {
               <div key={sub.name}>
                 <SidebarGroupLabel asChild className="w-full">
                   <CollapsibleTrigger>
-                    <SidebarMenuButton>
+                    <SidebarMenuButton isActive={sub.name === name}>
                       {sub.Icon}
                       {sub.name}
                       <ChevronDown className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-180" />
@@ -29,7 +35,7 @@ export default function SidebarContext(): JSX.Element {
                     {sub.items.map((item: PropsItem) => (
                       <a href={item.url} key={item.name}>
                         <SidebarGroupContent>
-                          <SidebarMenuButton>
+                          <SidebarMenuButton isActive={item.name === itemSub}>
                             {item.name}
                           </SidebarMenuButton>
                         </SidebarGroupContent>

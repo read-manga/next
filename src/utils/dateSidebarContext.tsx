@@ -1,4 +1,4 @@
-import { HouseIcon } from "lucide-react";
+import { HouseIcon, MessageSquareMoreIcon } from "lucide-react";
 
 export interface PropsItem {
   name: string,
@@ -26,10 +26,24 @@ export const data: Array<PropsListContext> = [
         items: [
           {
             name: "App",
-            url: "/"
-          }
+            url: "/",
+          },
+          {
+            name: "Termos de Uso",
+            url: "/",
+          },
         ]
-      }
+      },
+      {
+        name: "Chat",
+        Icon: (<MessageSquareMoreIcon />),
+        items: [
+          {
+            name: "Privado",
+            url: "/chat/user/:id",
+          },
+        ]
+      },
     ]
   },
 ];

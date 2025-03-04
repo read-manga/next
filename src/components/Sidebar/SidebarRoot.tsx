@@ -9,7 +9,7 @@ interface PropsNavabarRoot {
 
 export default function SidebarRoot({ children, variant, side }: PropsNavabarRoot): JSX.Element {
   return (
-    <Sidebar variant={variant} side={side}>
+    <Sidebar variant={variant} className="border-[var(--sidebar-border)]" side={side}>
       {children}
     </Sidebar>
   );

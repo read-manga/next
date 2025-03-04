@@ -16,23 +16,23 @@ export default function SidebarFooterComponet(): JSX.Element {
         <SidebarMenuItem>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <SidebarMenuButton>
+              <SidebarMenuButton isActive>
                 <Toggles.Mode /> Theme
                 <ChevronUp className="ml-auto" />
               </SidebarMenuButton>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="border-none" align="end">
-              <DropdownMenuItem onClick={() => setTheme("light")}>
+            <DropdownMenuContent className="border-[var(--sidebar-border)] px-0" align="end">
+              <DropdownMenuItem className="px-1" onClick={() => setTheme("light")}>
                 <SidebarMenuButton>
                   Light
                 </SidebarMenuButton>
               </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setTheme("dark")}>
+              <DropdownMenuItem className="px-1" onClick={() => setTheme("dark")}>
                 <SidebarMenuButton>
                   Dark
                 </SidebarMenuButton>
               </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setTheme("system")}>
+              <DropdownMenuItem className="px-1" onClick={() => setTheme("system")}>
                 <SidebarMenuButton>
                   System
                 </SidebarMenuButton>

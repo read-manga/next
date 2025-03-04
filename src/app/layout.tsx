@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link id="theme-link" rel="stylesheet" href="/themes/lara-light-blue/theme.css" />
+        
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
