@@ -1,5 +1,7 @@
+'use client'
 import LayoutApp from "@/layout/App";
 import { JSX } from "react";
+import ChatUser from '../../../../components/Chat/ChatUser'
 
 export default function ChartUserId(): JSX.Element {
   return (
@@ -7,7 +9,7 @@ export default function ChartUserId(): JSX.Element {
       name: "Chat",
       itemSub: "Privado"
     }}>
-      chat aqui
+      <ChatUser/>
     </LayoutApp>
   );
 }
