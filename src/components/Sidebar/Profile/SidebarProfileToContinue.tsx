@@ -45,10 +45,13 @@ export default function SidebarProfileToContinue(): JSX.Element {
                     <p className="text-lg font-bold">Chaindsew man</p>
                   </CardHeader>
                   <CardFooter className="py-2 px-2">
-                    <DrawerInformation.Root>
+                    <DrawerInformation.Root button={(
                       <Button size="sm" className="text-zinc-400 bg-[var(--sidebar)] decoration-2 transition-all delay-100 duration-500 text-base ">
                         Ver
                       </Button>
+                    )}>
+                      <DrawerInformation.Head />
+                      <DrawerInformation.Footer />
                     </DrawerInformation.Root>
                   </CardFooter>
                 </Card>
