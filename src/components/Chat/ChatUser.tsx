@@ -24,7 +24,7 @@ const Chat = () => {
   };
 
   return (
-    <div className="h-[100vh] flex flex-col">
+    <div className="h-screen w-full flex flex-col pl-1 pr-3">
       <ChatList messages={messages} />
       <MessageInput onSendMessage={handleSendMessage} />
     </div>

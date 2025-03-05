@@ -34,15 +34,15 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ user, message, timestamp, ima
   };
 
   return (
-    <div className="w-210 p-2 mb-1 hover:bg-[var(--sidebar-accent)] flex items-start gap-2">
+    <div className="w-full p-2 mb-1 transition-all delay-100 duration-700 rounded-2xl hover:bg-[var(--sidebar-accent)] flex items-start gap-2">
       <img src={user.avatar} className="rounded-full w-10 h-10" alt="Avatar" />
-      <div className="flex flex-col max-w-[80%]">
+      <div className="flex flex-col max-w-full">
         <strong className="block">
           {user.name} <span className="text-xs font-medium text-neutral-500">{formattedDate}</span>
         </strong>
         <div className="relative">
           {message && (
-            <p className="whitespace-pre-wrap break-words w-full text-sm p-2 rounded-lg min-h-[40px] shadow">
+            <p className="whitespace-pre-wrap break-words w-full text-sm p-2 min-h-[40px]">
               {message}
             </p>
           )}

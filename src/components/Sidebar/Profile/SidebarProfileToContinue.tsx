@@ -6,6 +6,7 @@ import { Card, CardFooter, CardHeader } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { SidebarContent, SidebarGroup, SidebarGroupLabel } from "@/components/ui/sidebar";
 import Autoplay from "embla-carousel-autoplay"
+import { BookIcon } from "lucide-react";
 import Image from "next/image";
 import React, { JSX } from "react";
 
@@ -40,11 +41,12 @@ export default function SidebarProfileToContinue(): JSX.Element {
               <div className="p-1 h-full">
                 <Card className="border-1 bg-[var(--muted)] border-[var(--sidebar-ring)] py-0 h-full shadow-none">
                   <CardHeader className="px-2 py-2">
-                    <span className="text-sm font-bold text-[var(--sidebar-ring)]">Manga</span>
+                    <span className="text-sm font-bold text-[var(--sidebar-ring)] flex items-center gap-1">
+                      <BookIcon className="w-4 h-4" />
+                      Manga
+                    </span>
 
                     <p className="text-lg font-bold">Chaindsew man</p>
-                  </CardHeader>
-                  <CardFooter className="py-2 px-2">
                     <DrawerInformation.Root button={(
                       <Button size="sm" className="text-zinc-400 bg-[var(--sidebar)] decoration-2 transition-all delay-100 duration-500 text-base ">
                         Ver
@@ -53,7 +55,7 @@ export default function SidebarProfileToContinue(): JSX.Element {
                       <DrawerInformation.Head />
                       <DrawerInformation.Footer />
                     </DrawerInformation.Root>
-                  </CardFooter>
+                  </CardHeader>
                 </Card>
               </div>
             </CarouselItem>

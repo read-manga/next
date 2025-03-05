@@ -10,9 +10,7 @@ export default function DrawerInfoHead(): JSX.Element {
         <div className="text-xl font-bold select-none pointer-events-none text-zinc-700 dark:text-zinc-400 flex items-center justify-start gap-2 w-fit">
           <BookIcon className="w-6 h-6" />
           <span>Manga</span>
-        </div>
-        <div className="flex items-center gap-1 my-2">
-          <Button size="sm" variant="outline" className="text-yellow-300 px-6 py-1">Free</Button>
+          <Button size="sm" className="bg-green-500 text-white px-2 py-1">Free</Button>
         </div>
         <DrawerTitle className="mt-4">
           <h2 className="text-4xl font-bold">Chainsew Man</h2>

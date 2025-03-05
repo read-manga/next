@@ -20,7 +20,7 @@ const ChatList: React.FC<ChatListProps> = ({ messages }) => {
   }, [messages]);
 
   return (
-    <div className="p-2 overflow-y-auto h-[calc(100vh-70px)] flex flex-col">
+    <div className="scrollbar-thin p-2 overflow-y-auto h-full mt-4 w-full flex flex-col">
       {messages.map((msg, index) => (
         <ChatMessage
           key={index}

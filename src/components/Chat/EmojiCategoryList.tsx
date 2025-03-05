@@ -10,7 +10,7 @@ interface EmojiCategoryListProps {
 
 const EmojiCategoryList: React.FC<EmojiCategoryListProps> = ({ activeCategory, onCategoryClick, onEmojiClick }) => {
   return (
-    <div className="absolute left-120 bottom-[50px] mb-2 w-80 p-2 bg-neutral-800 rounded-md max-h-[300px] overflow-y-auto">
+    <div className="w-full max-h-80 p-2 bg-neutral-800 rounded-md scrollbar-thin overflow-y-scroll">
       {Object.keys(emojis).map((category: string) => {
         const emojiCategory = category as EmojiCategory;
         return (

@@ -30,7 +30,9 @@ export default function LayoutApp({ children, context }: PropsLayoutApp): JSX.El
         </SidebarComponent.Root>
         <SidebarInset>
           <main>
-            {children}
+            <section className="max-w-[calc(100%-16.1rem)]">
+              {children}
+            </section>
             <SidebarComponent.Root variant="sidebar" side="right">
               <SidebarComponent.Profile.Head />
               <SidebarComponent.Profile.ToContinue />
