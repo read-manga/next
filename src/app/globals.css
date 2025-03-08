@@ -116,3 +116,7 @@
     background: transparent;
   }
 }
+
+div {
+  cursor: default;
+}

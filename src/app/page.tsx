@@ -1,3 +1,4 @@
+import { Navabar } from "@/components/Navbar";
 import LayoutApp from "@/layout/App";
 
 
@@ -7,7 +8,10 @@ export default function Home() {
       name: "Home",
       itemSub: "App"
     }}>
-      chat aqui
+      <Navabar.Root>
+        <Navabar.Trigger text="Anime" />
+        <Navabar.Item />
+      </Navabar.Root>
     </LayoutApp>
   );
 }

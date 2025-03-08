@@ -1,6 +1,6 @@
 'use client';
 
-import { JSX, ReactNode } from "react";
+import { JSX } from "react";
 import { SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarMenuAction, SidebarMenuButton, SidebarMenuItem, SidebarMenuSub } from "@/components/ui/sidebar";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { ChevronDown, HouseIcon } from "lucide-react";
@@ -17,12 +17,12 @@ export default function SidebarContext({ name, itemSub }: PropsSidebarContext): 
         <Collapsible key={context.name} defaultOpen className="group/collapsible">
           <SidebarGroup>
             <SidebarGroupLabel>
-              <span className="w-full px-3">{context.name}</span>
+              <span className="w-full">{context.name}</span>
             </SidebarGroupLabel>
             {context.sub.map((sub: PropsSub) => (
               <div key={sub.name}>
                 <SidebarGroupLabel asChild className="w-full">
-                  <CollapsibleTrigger>
+                  <CollapsibleTrigger asChild={true}>
                     <SidebarMenuButton isActive={sub.name === name}>
                       {sub.Icon}
                       {sub.name}

@@ -3,7 +3,7 @@
 import { JSX } from "react";
 import { SidebarFooter, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "@/components/ui/sidebar";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { ChevronUp, User2 } from "lucide-react";
+import { ChevronUp } from "lucide-react";
 import { Toggles } from "@/components/Toggles";
 import { useTheme } from "next-themes";
 
@@ -15,27 +15,27 @@ export default function SidebarFooterComponet(): JSX.Element {
       <SidebarMenu>
         <SidebarMenuItem>
           <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <SidebarMenuButton isActive>
+            <DropdownMenuTrigger asChild={true}>
+              <div className="flex items-center w-full transition-all delay-100 duration-500 bg-[var(--sidebar-border)] rounded-lg">
                 <Toggles.Mode /> Theme
                 <ChevronUp className="ml-auto" />
-              </SidebarMenuButton>
+              </div>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="border-[var(--sidebar-border)] px-0" align="end">
               <DropdownMenuItem className="px-1" onClick={() => setTheme("light")}>
-                <SidebarMenuButton>
+                <div className="w-full p-2 transition-all delay-100 duration-500 hover:bg-[var(--sidebar-border)] rounded-lg">
                   Light
-                </SidebarMenuButton>
+                </div>
               </DropdownMenuItem>
               <DropdownMenuItem className="px-1" onClick={() => setTheme("dark")}>
-                <SidebarMenuButton>
+                <div className="w-full p-2 transition-all delay-100 duration-500 hover:bg-[var(--sidebar-border)] rounded-lg">
                   Dark
-                </SidebarMenuButton>
+                </div>
               </DropdownMenuItem>
               <DropdownMenuItem className="px-1" onClick={() => setTheme("system")}>
-                <SidebarMenuButton>
+                <div className="w-full p-2 transition-all delay-100 duration-500 hover:bg-[var(--sidebar-border)] rounded-lg">
                   System
-                </SidebarMenuButton>
+                </div>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>

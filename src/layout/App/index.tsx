@@ -21,24 +21,24 @@ interface PropsLayoutApp {
  */
 export default function LayoutApp({ children, context }: PropsLayoutApp): JSX.Element {
   return (
-    <div>
+    <div className="overflow-hidden">
       <SidebarProvider>
         <SidebarComponent.Root variant="floating" side="left">
           <SidebarComponent.Head />
-          <SidebarComponent.Context name={context.name} itemSub={context.itemSub}/>
+          <SidebarComponent.Context name={context.name} itemSub={context.itemSub} />
           <SidebarComponent.Footer />
         </SidebarComponent.Root>
         <SidebarInset>
-          <main>
-            <section className="max-w-[calc(100%-16.1rem)]">
-              {children}
-            </section>
-            <SidebarComponent.Root variant="sidebar" side="right">
-              <SidebarComponent.Profile.Head />
-              <SidebarComponent.Profile.ToContinue />
-            </SidebarComponent.Root>
-          </main>
+          <section className="max-w-[calc(100%-16.1rem)]">
+            {children}
+          </section>
         </SidebarInset>
+      </SidebarProvider>
+      <SidebarProvider className="overflow-hidden min-h-0">
+        <SidebarComponent.Root variant="sidebar" side="right">
+          <SidebarComponent.Profile.Head />
+          <SidebarComponent.Profile.ToContinue />
+        </SidebarComponent.Root>
       </SidebarProvider>
     </div>
   );
