@@ -3,15 +3,12 @@ import { JSX } from "react";
 
 interface PropsNavbarTrigger {
   text: string,
-  select?: boolean;
 }
 
-export default function NavbarTrigger({ text, select }: PropsNavbarTrigger): JSX.Element {
+export default function NavbarTrigger({ text }: PropsNavbarTrigger): JSX.Element {
   return (
     <NavigationMenuTrigger>
-      <div className={select ? "p-2 rounded-lg bg-[var(--sidebar-border)]" : "p2"}>
-        <p className="font-bold text-2xl">{text}</p>
-      </div>
+      <p className="text-xl">{text}</p>
     </NavigationMenuTrigger>
   );
 }

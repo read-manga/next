@@ -29,7 +29,7 @@ export default function LayoutApp({ children, context }: PropsLayoutApp): JSX.El
           <SidebarComponent.Footer />
         </SidebarComponent.Root>
         <SidebarInset>
-          <section className="max-w-[calc(100%-16.1rem)]">
+          <section className="max-w-[calc(100%-16.1rem)] pr-2">
             {children}
           </section>
         </SidebarInset>

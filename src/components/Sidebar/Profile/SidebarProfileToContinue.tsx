@@ -5,13 +5,13 @@ import { Button } from "@/components/ui/button";
 import { Card, CardFooter, CardHeader } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { SidebarContent, SidebarGroup, SidebarGroupLabel } from "@/components/ui/sidebar";
-import Autoplay from "embla-carousel-autoplay"
+import Autoplay, { AutoplayType } from "embla-carousel-autoplay"
 import { BookIcon } from "lucide-react";
 import Image from "next/image";
-import React, { JSX } from "react";
+import React, { JSX, RefObject } from "react";
 
 export default function SidebarProfileToContinue(): JSX.Element {
-  const plugin = React.useRef(
+  const plugin: RefObject<AutoplayType> = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
   );
 

@@ -1,7 +1,7 @@
 import { JSX, ReactNode } from "react";
-import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "@/components/ui/navigation-menu";
+import { NavigationMenu, NavigationMenuList } from "@/components/ui/navigation-menu";
 import { SidebarMenuButton, SidebarTrigger } from "@/components/ui/sidebar";
-import { Collapsible, CollapsibleTrigger } from "@/components/ui/collapsible";
+import NavbarSearch from "./NavbarSearch";
 
 interface PropsNavbarRoot {
   children: ReactNode,
@@ -15,11 +15,10 @@ export default function NavbarRoot({ children }: PropsNavbarRoot): JSX.Element {
       </SidebarTrigger>
       <NavigationMenu>
         <NavigationMenuList>
-          <NavigationMenuItem>
-            {children}
-          </NavigationMenuItem>
+          {children}
         </NavigationMenuList>
       </NavigationMenu>
+      <NavbarSearch />
     </div>
   );
 }
