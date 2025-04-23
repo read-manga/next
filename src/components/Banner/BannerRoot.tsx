@@ -14,10 +14,10 @@ export default function BannerRoot({ children }: PropsBannerRoot): JSX.Element {
   );
 
   return (
-    <section className="w-full flex items-center justify-center my-4">
+    <section className="w-full flex items-center justify-center mt-2 mb-10">
       <Carousel 
         plugins={[plugin.current]}
-        className="w-full md:max-w-3xl sm:max-w-xl max-w-full"
+        className="w-full max-w-full"
         onMouseEnter={plugin.current.stop}
         onMouseLeave={plugin.current.reset}
         >

@@ -1,7 +1,9 @@
 import { Banner } from "@/components/Banner";
+import { Collection } from "@/components/Collection";
 import { Navbar } from "@/components/Navbar";
 import LayoutApp from "@/layout/App";
 import { data, PropsNavbar, PropsNavbarList } from "@/utils/dateNavbar";
+import { BookIcon } from "lucide-react";
 
 
 export default function Home() {
@@ -25,6 +27,14 @@ export default function Home() {
       <Banner.Root>
         <Banner.Card />
       </Banner.Root>
+      <Collection.Root>
+        <Collection.Header title="Novos" url="/all/m/index" Icon={<BookIcon className="text-zinc-500 h-6 w-6" />}/>
+        <Collection.Carousel />
+      </Collection.Root>
+      <Collection.Root>
+        <Collection.Header title="Populares" url="/all/m/index" Icon={<BookIcon className="text-zinc-500 h-6 w-6" />}/>
+        <Collection.Carousel />
+      </Collection.Root>
     </LayoutApp>
   );
 }
