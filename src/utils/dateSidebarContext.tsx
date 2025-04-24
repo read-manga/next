@@ -52,6 +52,10 @@ export const data: Array<PropsListContext> = [
             name: "Login",
             url: "/user/login",
           },
+          {
+            name: "Register",
+            url: "/user/register",
+          },
         ]
       },
     ]
