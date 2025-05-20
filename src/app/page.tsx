@@ -1,7 +1,7 @@
 import { Banner } from "@/components/Banner";
 import { Collection } from "@/components/Collection";
 import { Navbar } from "@/components/Navbar";
-import LayoutApp from "@/layout/App";
+import LayoutApp from "@/layout/dash";
 import { data, PropsNavbar, PropsNavbarList } from "@/utils/dateNavbar";
 import { BookIcon } from "lucide-react";
 

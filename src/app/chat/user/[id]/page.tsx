@@ -1,5 +1,5 @@
 'use client'
-import LayoutApp from "@/layout/App";
+import LayoutApp from "@/layout/dash";
 import { JSX } from "react";
 import ChatUser from '../../../../components/Chat/ChatUser'
 

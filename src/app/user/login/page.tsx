@@ -1,40 +1,19 @@
-"use client";
-
-import LayoutApp from "@/layout/App";
+import LayoutApp from "@/layout/dash";
 import { JSX } from "react";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
 import { LoginComponent } from "@/components/Login";
 
-const formSchema = z.object({
-  email: z.string().max(20, {
-    message: "E-mail deve ser menor que 20 caracteres."
-  }).email({
-    message: "O campo deve ser preenchido com um E-mail válido."
-  }),
-  password: z.string().min(6, {
-    message: "O password deve ser maior 6 caracteres."
-  }).max(18, {
-    message: "O password deve ser menor que 18 caracteres."
-  })
-})
-
-export default function Login(): JSX.Element {
-
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-  });
-
+export default async function Login(): Promise<JSX.Element> {
   return (
-    <LayoutApp context={{
-      name: "User",
-      itemSub: "Login"
-    }}>
-      <LoginComponent.Root form={form} formSchema={formSchema}>
+    <LayoutApp
+      context={{
+        name: "User",
+        itemSub: "Login",
+      }}
+    >
+      <LoginComponent.Root>
         <LoginComponent.Card>
-          <LoginComponent.Head/>
-          <LoginComponent.Content form={form}/>
+          <LoginComponent.Head />
+          <LoginComponent.Content />
           <LoginComponent.Footer />
         </LoginComponent.Card>
       </LoginComponent.Root>
