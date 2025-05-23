@@ -1,6 +1,6 @@
 "use client";
 
-import { JSX, useEffect, useImperativeHandle, useRef, useState } from "react";
+import { ReactElement, useEffect, useRef, useState } from "react";
 import { CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
@@ -17,7 +17,7 @@ interface PropsLoginCardContent {
   }>,
 }*/
 
-export default function LoginCardContent(): JSX.Element {
+export default function LoginCardContent(): ReactElement {
   const emailRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
   const searchParams = useSearchParams();

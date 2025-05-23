@@ -1,6 +1,6 @@
 "use client";
 
-import { JSX, useState } from "react";
+import { ReactElement, useState } from "react";
 import { CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
@@ -18,7 +18,7 @@ interface PropsLoginCardContent {
   }>,
 }*/
 
-export default function RegisterCardContent(): JSX.Element {
+export default function RegisterCardContent(): ReactElement {
   const [isPassword, setIsPassword] = useState(true);
 
   return (

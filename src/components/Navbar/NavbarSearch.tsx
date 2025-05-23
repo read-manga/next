@@ -1,7 +1,7 @@
-import { JSX } from "react";
+import { ReactElement } from "react";
 import { SearchIcon } from "lucide-react";
 
-export default function NavbarSearch(): JSX.Element {
+export default function NavbarSearch(): ReactElement {
   return (
     <div className="sm:max-w-[200px] md:max-w-[300px] w-full hover:bg-[var(--sidebar-accent)] transition-all delay-150 duration-300 flex items-center gap-2 py-1 px-2 bg-[var(--sidebar)] border border-[var(--sidebar-border)] rounded-lg max-h-[80px] h-full">
       <span className="text-zinc-400 font-medium text-base w-full h-full">

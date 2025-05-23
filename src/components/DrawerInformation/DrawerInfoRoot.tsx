@@ -1,12 +1,12 @@
-import { JSX, ReactNode } from "react";
+import { ReactElement } from "react";
 import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 
 interface PropsDrawerInformationRoot {
-  children: ReactNode,
+  children: ReactElement[] | ReactElement,
   button: any,
 }
 
-export default function DrawerInformationRoot({ children, button }: PropsDrawerInformationRoot): JSX.Element {
+export default function DrawerInformationRoot({ children, button }: PropsDrawerInformationRoot): ReactElement {
   return (
     <Drawer>
       <DrawerTrigger asChild>

@@ -1,8 +1,8 @@
 import LayoutApp from "@/layout/dash";
-import { JSX } from "react";
+import { ReactElement } from "react";
 import { LoginComponent } from "@/components/Login";
 
-export default async function Login(): Promise<JSX.Element> {
+export default async function Login(): Promise<ReactElement> {
   return (
     <LayoutApp
       context={{
@@ -12,9 +12,11 @@ export default async function Login(): Promise<JSX.Element> {
     >
       <LoginComponent.Root>
         <LoginComponent.Card>
-          <LoginComponent.Head />
-          <LoginComponent.Content />
-          <LoginComponent.Footer />
+          <>
+            <LoginComponent.Head />
+            <LoginComponent.Content />
+            <LoginComponent.Footer />
+          </>
         </LoginComponent.Card>
       </LoginComponent.Root>
     </LayoutApp>

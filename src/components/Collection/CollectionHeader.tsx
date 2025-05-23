@@ -1,4 +1,4 @@
-import { JSX } from "react";
+import { ReactElement } from "react";
 
 interface PropsCollectionHeader {
   title: string,
@@ -6,7 +6,7 @@ interface PropsCollectionHeader {
   Icon: any,
 }
 
-export default function CollectionHeader({ title, url, Icon}: PropsCollectionHeader): JSX.Element {
+export default function CollectionHeader({ title, url, Icon}: PropsCollectionHeader): ReactElement {
   return (
     <div className="mb-4 flex items-center gap-2">
       <p className="uppercase text-3xl font-bold flex items-center gap-1">

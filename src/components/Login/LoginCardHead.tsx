@@ -1,8 +1,8 @@
-import { JSX } from "react";
+import { ReactElement } from "react";
 import { CardHeader } from "../ui/card";
 import { UserIcon } from "lucide-react";
 
-export default function LoginCardHead(): JSX.Element {
+export default function LoginCardHead(): ReactElement {
   return (
     <CardHeader>
       <div className="flex flex-col items-center gap-4 text-3xl text-zinc-300 text-center font-bold uppercase">

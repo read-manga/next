@@ -1,14 +1,14 @@
-import { JSX, ReactNode } from "react";
+import { ReactElement } from "react";
 import { NavigationMenuContent, NavigationMenuLink, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 
 interface PropsNavbarItem {
-  children: ReactNode,
+  children: ReactElement,
   label?: string | undefined,
   text?: string,
   icon?: any,
 }
 
-export default function NavbarItem({ children, label, text, icon }: PropsNavbarItem): JSX.Element {
+export default function NavbarItem({ children, label, text, icon }: PropsNavbarItem): ReactElement {
   return (
     <NavigationMenuContent className="bg-[var(--card)]">
       <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">

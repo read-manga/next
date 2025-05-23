@@ -1,15 +1,15 @@
 "use client";
 
-import { JSX, ReactNode } from "react";
+import { ReactElement } from "react";
 import { NavigationMenuItem } from "@/components/ui/navigation-menu";
 import { usePathname } from "next/navigation";
 
 interface PropsMenuItem {
-  children: ReactNode,
+  children: ReactElement,
   title: string,
 }
 
-export default function NavbarMenuItem({ children, title }: PropsMenuItem): JSX.Element {
+export default function NavbarMenuItem({ children, title }: PropsMenuItem): ReactElement {
   const routeName = usePathname();
 
   return (

@@ -1,14 +1,14 @@
 'use client';
 
-import { JSX } from "react";
-import { SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarMenuAction, SidebarMenuButton, SidebarMenuItem, SidebarMenuSub } from "@/components/ui/sidebar";
+import { ReactElement } from "react";
+import { SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarMenuButton, SidebarMenuSub } from "@/components/ui/sidebar";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { ChevronDown, HouseIcon } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { data, PropsItem, PropsListContext, PropsSub } from "@/utils/dateSidebarContext";
 import { PropsSidebarContext } from "@/types/context";
 //import { useParams } from "next/navigation";
 
-export default function SidebarContext({ name, itemSub }: PropsSidebarContext): JSX.Element {
+export default function SidebarContext({ name, itemSub }: PropsSidebarContext): ReactElement {
   //const { id } = useParams();
 
   return (

@@ -1,9 +1,9 @@
-import { JSX } from "react";
-import { SidebarHeader, SidebarMenu, SidebarMenuAction, SidebarMenuButton, SidebarMenuItem } from "@/components/ui/sidebar";
+import { ReactElement } from "react";
+import { SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "@/components/ui/sidebar";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { BellIcon } from "lucide-react";
 
-export default function SidebarProfileHead(): JSX.Element {
+export default function SidebarProfileHead(): ReactElement {
   return (
     <SidebarHeader className="py-4 px-2">
       <SidebarMenu>

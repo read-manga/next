@@ -1,8 +1,8 @@
-import { JSX } from "react";
+import { ReactElement } from "react";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
 
-export default function AuthLoading(): JSX.Element {
+export default function AuthLoading(): ReactElement {
   return (
     <Card className="w-full md:w-[350px] lg:w-[500px] px-0 py-0 p-4 rounded-lg border-none bg-[var(--sidebar-accent)]">
       <Image

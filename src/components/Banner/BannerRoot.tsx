@@ -1,14 +1,14 @@
 "use client";
 
-import { JSX, ReactNode, RefObject, useRef } from "react";
+import { ReactElement, RefObject, useRef } from "react";
 import Autoplay, { AutoplayType } from "embla-carousel-autoplay";
 import { Carousel } from "@/components/ui/carousel";
 
 interface PropsBannerRoot {
-  children: ReactNode,
+  children: ReactElement,
 }
 
-export default function BannerRoot({ children }: PropsBannerRoot): JSX.Element {
+export default function BannerRoot({ children }: PropsBannerRoot): ReactElement {
   const plugin: RefObject<AutoplayType> = useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
   );

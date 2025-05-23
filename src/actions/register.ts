@@ -49,7 +49,7 @@ export async function registerAction({
   const API = process.env.NEXT_PUBLIC_API_AUTH_URL;
 
   try {
-    const response = await axios.post(`${API}/user/auth/create-user`, {
+    const response = await axios.post(`${API}/auth/create-user`, {
       email,
       nickname,
       password,

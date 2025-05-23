@@ -1,11 +1,11 @@
-import { JSX } from "react";
+import { ReactElement } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Card } from "@/components/ui/card";
 import { BookIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { DrawerInformation } from "@/components/DrawerInformation";
 
-export default function CollectionCarousel(): JSX.Element {
+export default function CollectionCarousel(): ReactElement {
   return (
     <Carousel
       opts={{
@@ -32,8 +32,10 @@ export default function CollectionCarousel(): JSX.Element {
                 </div>
                 <div>
                   <DrawerInformation.Root button={<Button className="cursor-pointer border-1 border-[var(--sidebar)] bg-[var(--sidebar-accent)] mt-2" variant="outline" size="sm">Detalhes</Button>}>
-                    <DrawerInformation.Head />
-                    <DrawerInformation.Footer />
+                    <>
+                      <DrawerInformation.Head />
+                      <DrawerInformation.Footer />
+                    </>
                   </DrawerInformation.Root>
                 </div>
               </div>

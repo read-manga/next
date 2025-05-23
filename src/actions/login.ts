@@ -36,7 +36,7 @@ const formSchema = z.object({
   }),
 });
 
-export async function registerAction({
+export async function loginAction({
   email,
   password,
   captchaToken,
@@ -44,11 +44,20 @@ export async function registerAction({
   const API = process.env.NEXT_PUBLIC_API_AUTH_URL;
 
   try {
-    const response = await axios.post(`${API}/user/auth/login`, {
-      email,
-      password,
-      captchaToken,
-    });
+    const response = await axios.post(
+      `${API}/auth/login`,
+      {
+        email,
+        password,
+        captchaToken,
+      },
+      {
+        withCredentials: true,
+        headers: {
+          "Content-Type": "application/json"
+        }
+      }
+    );
 
     if (!response.data || !response.data.status) return;
 
@@ -90,7 +99,7 @@ export async function submitHandler(
     };
   }
 
-  const login = await registerAction(result.data);
+  const login = await loginAction(result.data);
   if (!login)
     return {
       status: 0,

@@ -1,9 +1,9 @@
-import { JSX } from "react";
+import { ReactElement } from "react";
 import { DrawerDescription, DrawerHeader, DrawerTitle } from "@/components/ui/drawer";
 import { BookIcon, EyeIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export default function DrawerInfoHead(): JSX.Element {
+export default function DrawerInfoHead(): ReactElement {
   return (
     <DrawerHeader className="w-full flex flex-col md:min-h-[500px] sm:min-h-[300px] max-h-[500px] items-start justify-between md:w-full md:min-w-[50%] md:max-w-[60%]">
       <div className="h-full">

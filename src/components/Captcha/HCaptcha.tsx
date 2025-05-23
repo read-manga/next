@@ -1,10 +1,8 @@
 "use client";
 import Script from "next/script";
-import { JSX, useEffect, useRef } from "react";
-import { UseFormSetValue } from "react-hook-form";
+import { ReactElement, useEffect, useRef } from "react";
 
-
-export default function HCaptcha(): JSX.Element {
+export default function HCaptcha(): ReactElement {
   const captchaRef = useRef<HTMLDivElement>(null);
   const sitekey = process.env.NEXT_PUBLIC_CAPTCHA_SITEKEY;
   useEffect(() => {

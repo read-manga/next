@@ -1,25 +1,24 @@
 import { SidebarComponent } from "@/components/Sidebar";
 import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar";
 import { PropsSidebarContext } from "@/types/context";
-import { JSX, ReactNode } from "react";
-
+import { ReactElement } from "react";
 
 
 /**
- * @property PropsLayoutApp.children: ReactNode
+ * @property PropsLayoutApp.children: ReactElement
  * Recebe um components para forma o layout principal do App.
  */
 interface PropsLayoutApp {
-  children: ReactNode;
+  children: ReactElement[] | ReactElement;
   context: PropsSidebarContext,
 }
 
 /**
  * 
  * @param param children
- * @returns JSX.Element
+ * @returns ReactElement
  */
-export default async function LayoutApp({ children, context }: PropsLayoutApp): Promise<JSX.Element> {
+export default async function LayoutApp({ children, context }: PropsLayoutApp): Promise<ReactElement> {
   return (
     <div className="overflow-hidden">
       <SidebarProvider>

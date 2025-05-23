@@ -1,6 +1,6 @@
 "use client";
 
-import { JSX, ReactNode, useState, useEffect, useTransition } from "react";
+import { ReactElement, useState, useTransition } from "react";
 import { submitHandler } from "@/actions/login";
 import AuthLoading from "@/components/Loading/AuthLoading";
 import { useRouter } from "next/navigation";
@@ -8,27 +8,20 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { MessageCircleWarningIcon } from "lucide-react";
 
 interface PropsLoginRoot {
-  children: ReactNode;
+  children: ReactElement;
 }
 
-export default function LoginRoot({ children }: PropsLoginRoot): JSX.Element {
+export default function LoginRoot({ children }: PropsLoginRoot): ReactElement {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const [alertMessage, setAlertMessage] = useState<{
     [key: string]: string;
   }>();
 
-  useEffect(() => {
-    const isToken = localStorage.getItem("token");
-    if (isToken) router.push("/");
-  }, []);
-
   async function handleSubmit(formData: FormData) {
     startTransition(async () => {
       const result = await submitHandler(formData);
-      console.log(result);
       if (result.status) {
-        localStorage.setItem("token", result.data);
         router.push(`/`);
       } else {
         if (result.data) setAlertMessage(result.data);

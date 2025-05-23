@@ -1,9 +1,9 @@
-import { JSX } from "react";
+import { ReactElement } from "react";
 import { CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MoveRightIcon } from "lucide-react";
 
-export default function RegisterCardFooter(): JSX.Element {
+export default function RegisterCardFooter(): ReactElement {
   return (
     <CardFooter>
       <div className="w-full flex items-center gap-2 justify-between">

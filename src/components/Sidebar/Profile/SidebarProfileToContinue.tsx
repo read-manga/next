@@ -2,15 +2,14 @@
 
 import { DrawerInformation } from "@/components/DrawerInformation";
 import { Button } from "@/components/ui/button";
-import { Card, CardFooter, CardHeader } from "@/components/ui/card";
+import { Card, CardHeader } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { SidebarContent, SidebarGroup, SidebarGroupLabel } from "@/components/ui/sidebar";
 import Autoplay, { AutoplayType } from "embla-carousel-autoplay"
 import { BookIcon } from "lucide-react";
-import Image from "next/image";
-import React, { JSX, RefObject } from "react";
+import React, { ReactElement, RefObject } from "react";
 
-export default function SidebarProfileToContinue(): JSX.Element {
+export default function SidebarProfileToContinue(): ReactElement {
   const plugin: RefObject<AutoplayType> = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
   );

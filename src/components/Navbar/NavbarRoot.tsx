@@ -1,13 +1,13 @@
-import { JSX, ReactNode } from "react";
+import { ReactElement } from "react";
 import { NavigationMenu, NavigationMenuList } from "@/components/ui/navigation-menu";
 import { SidebarMenuButton, SidebarTrigger } from "@/components/ui/sidebar";
 import NavbarSearch from "./NavbarSearch";
 
 interface PropsNavbarRoot {
-  children: ReactNode,
+  children: ReactElement,
 }
 
-export default function NavbarRoot({ children }: PropsNavbarRoot): JSX.Element {
+export default function NavbarRoot({ children }: PropsNavbarRoot): ReactElement {
   return (
     <div className="w-full py-4 flex items-center justify-between">
       <SidebarTrigger>

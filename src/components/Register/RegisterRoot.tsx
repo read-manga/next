@@ -1,6 +1,6 @@
 "use client";
 
-import { JSX, ReactNode, useState, useEffect, useTransition } from "react";
+import { ReactElement, useState, useTransition } from "react";
 import { submitHandler } from "@/actions/register";
 import { useRouter } from "next/navigation";
 import AuthLoading from "@/components/Loading/AuthLoading";
@@ -8,12 +8,12 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { MessageCircleWarningIcon } from "lucide-react";
 
 interface PropsRegisterRoot {
-  children: ReactNode;
+  children: ReactElement;
 }
 
 export default function RegisterRoot({
   children,
-}: PropsRegisterRoot): JSX.Element {
+}: PropsRegisterRoot): ReactElement {
   /*const onSubmit: SubmitHandler<z.infer<typeof formSchema>> = async (values: z.infer<typeof formSchema>) => {
     const actionsQuery = await registerAction(values);
   }*/
@@ -22,11 +22,6 @@ export default function RegisterRoot({
   const [alertMessage, setAlertMessage] = useState<{
     [key: string]: string;
   }>();
-
-  useEffect(() => {
-    const isToken = localStorage.getItem("token");
-    if (isToken) router.push("/");
-  }, []);
 
   async function handleSubmit(formData: FormData) {
     startTransition(async () => {

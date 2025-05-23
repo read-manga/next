@@ -1,13 +1,13 @@
 'use client';
 
-import { JSX } from "react";
-import { SidebarFooter, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "@/components/ui/sidebar";
+import { ReactElement } from "react";
+import { SidebarFooter, SidebarMenu, SidebarMenuItem } from "@/components/ui/sidebar";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { ChevronUp } from "lucide-react";
 import { Toggles } from "@/components/Toggles";
 import { useTheme } from "next-themes";
 
-export default function SidebarFooterComponet(): JSX.Element {
+export default function SidebarFooterComponet(): ReactElement {
   const { setTheme } = useTheme();
 
   return (

@@ -4,25 +4,32 @@ import { Navbar } from "@/components/Navbar";
 import LayoutApp from "@/layout/dash";
 import { data, PropsNavbar, PropsNavbarList } from "@/utils/dateNavbar";
 import { BookIcon } from "lucide-react";
+import { ReactElement } from "react";
 
 
-export default function Home() {
+export default async function Home(): Promise<ReactElement> {
   return (
     <LayoutApp context={{
       name: "Home",
       itemSub: "App"
     }}>
       <Navbar.Root>
-        {data.map((index: PropsNavbar) => (
-          <Navbar.Menu title={index.title.toLocaleLowerCase() === "/mangas" ? "/" : `${index.title.toLocaleLowerCase()}`} key={index.title}>
-            <Navbar.Trigger text={index.title} />
-            <Navbar.Item label={index.label} text={index.description} icon={index.icon}>
-              {index.list.map((l: PropsNavbarList) => (
-                <Navbar.List key={index.label} label={l.label} text={l.text}/>
-              ))}
-            </Navbar.Item>
-          </Navbar.Menu>
-        ))}
+        <>
+          {data.map((index: PropsNavbar) => (
+            <Navbar.Menu title={index.title.toLocaleLowerCase() === "/mangas" ? "/" : `${index.title.toLocaleLowerCase()}`} key={index.title}>
+              <>
+                <Navbar.Trigger text={index.title} />
+                <Navbar.Item label={index.label} text={index.description} icon={index.icon}>
+                  <>
+                    {index.list.map((l: PropsNavbarList) => (
+                      <Navbar.List key={index.label} label={l.label} text={l.text}/>
+                    ))}
+                  </>
+                </Navbar.Item>
+              </>
+            </Navbar.Menu>
+          ))}
+        </>
       </Navbar.Root>
       <Banner.Root>
         <Banner.Card />

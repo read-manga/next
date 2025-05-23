@@ -1,7 +1,7 @@
-import { JSX } from "react";
+import { ReactElement } from "react";
 import { CarouselContent, CarouselItem } from "../ui/carousel";
 
-export default function BannerCard(): JSX.Element {
+export default function BannerCard(): ReactElement {
   return (
     <CarouselContent>
       {Array.from({ length: 5 }).map((_, index) => (

@@ -1,7 +1,7 @@
-import { JSX } from "react";
-import { SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "@/components/ui/sidebar";
+import { ReactElement } from "react";
+import { SidebarHeader, SidebarMenu, SidebarMenuItem } from "@/components/ui/sidebar";
 
-export default function SidebarHead(): JSX.Element {
+export default function SidebarHead(): ReactElement {
   return (
     <SidebarHeader className="py-2 px-2">
       <SidebarMenu>

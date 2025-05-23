@@ -1,4 +1,4 @@
-import React, { JSX } from "react";
+import React, { ReactElement } from "react";
 import { NavigationMenuLink } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 
@@ -7,7 +7,7 @@ interface PropsNavbarList {
   text: string
 };
 
-export default function NavbarList({ label, text }: PropsNavbarList): JSX.Element {
+export default function NavbarList({ label, text }: PropsNavbarList): ReactElement {
   return (
     <ListItem title={label}>
       {text}

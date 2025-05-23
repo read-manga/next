@@ -1,8 +1,8 @@
-import * as React from "react";
+import { ReactElement } from "react";
 import { Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export function ModeToggle() {
+export function ModeToggle(): ReactElement {
   return (
     <Button variant="default" size="icon">
       <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />

@@ -1,11 +1,11 @@
-import { JSX } from "react";
+import { ReactElement } from "react";
 import { DrawerFooter } from "@/components/ui/drawer";
 import { Avatar } from "@/components/ui/avatar";
 import { AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 import { Button } from "@/components/ui/button";
 import { MessageSquareIcon } from "lucide-react";
 
-export default function DrawerInfoFooter(): JSX.Element {
+export default function DrawerInfoFooter(): ReactElement {
   return (
     <DrawerFooter>
       <div className="w-full flex items-end justify-between gap-2 mb-4">
