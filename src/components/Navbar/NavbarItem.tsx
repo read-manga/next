@@ -2,10 +2,10 @@ import { ReactElement } from "react";
 import { NavigationMenuContent, NavigationMenuLink, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 
 interface PropsNavbarItem {
-  children: ReactElement,
-  label?: string | undefined,
-  text?: string,
-  icon?: any,
+  children: ReactElement[] | ReactElement;
+  label?: string | undefined;
+  text?: string;
+  icon?: any;
 }
 
 export default function NavbarItem({ children, label, text, icon }: PropsNavbarItem): ReactElement {

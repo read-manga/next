@@ -5,8 +5,8 @@ import { NavigationMenuItem } from "@/components/ui/navigation-menu";
 import { usePathname } from "next/navigation";
 
 interface PropsMenuItem {
-  children: ReactElement,
-  title: string,
+  children: ReactElement[] | ReactElement;
+  title: string;
 }
 
 export default function NavbarMenuItem({ children, title }: PropsMenuItem): ReactElement {

@@ -5,7 +5,7 @@ import Autoplay, { AutoplayType } from "embla-carousel-autoplay";
 import { Carousel } from "@/components/ui/carousel";
 
 interface PropsBannerRoot {
-  children: ReactElement,
+  children: ReactElement;
 }
 
 export default function BannerRoot({ children }: PropsBannerRoot): ReactElement {

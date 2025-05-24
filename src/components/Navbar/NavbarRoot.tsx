@@ -4,10 +4,22 @@ import { SidebarMenuButton, SidebarTrigger } from "@/components/ui/sidebar";
 import NavbarSearch from "./NavbarSearch";
 
 interface PropsNavbarRoot {
-  children: ReactElement,
+  children: ReactElement[] | ReactElement;
+  type?: "between" | "start";
+  search: boolean;
 }
 
-export default function NavbarRoot({ children }: PropsNavbarRoot): ReactElement {
+export default function NavbarRoot({ children, type, search }: PropsNavbarRoot): ReactElement {
+  if (type && type === "start") return (
+    <div className="w-full py-4 flex items-center justify-start">
+      <SidebarTrigger>
+        <SidebarMenuButton></SidebarMenuButton>
+      </SidebarTrigger>
+      {children}
+      {search && <NavbarSearch />}
+    </div>
+  );
+
   return (
     <div className="w-full py-4 flex items-center justify-between">
       <SidebarTrigger>
@@ -18,7 +30,7 @@ export default function NavbarRoot({ children }: PropsNavbarRoot): ReactElement 
           {children}
         </NavigationMenuList>
       </NavigationMenu>
-      <NavbarSearch />
+      {search && <NavbarSearch />}
     </div>
   );
 }

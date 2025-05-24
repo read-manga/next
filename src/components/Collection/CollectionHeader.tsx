@@ -1,9 +1,9 @@
 import { ReactElement } from "react";
 
 interface PropsCollectionHeader {
-  title: string,
-  url: string,
-  Icon: any,
+  title: string;
+  url: string;
+  Icon: any;
 }
 
 export default function CollectionHeader({ title, url, Icon}: PropsCollectionHeader): ReactElement {

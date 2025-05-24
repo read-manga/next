@@ -3,8 +3,8 @@ import { NavigationMenuLink } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 
 interface PropsNavbarList {
-  label: string,
-  text: string
+  label: string;
+  text: string;
 };
 
 export default function NavbarList({ label, text }: PropsNavbarList): ReactElement {

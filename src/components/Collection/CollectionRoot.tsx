@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 
 interface PropsCollectionProps {
-  children: ReactElement[] | ReactElement,
+  children: ReactElement[] | ReactElement;
 }
 
 export default function CollectionRoot({ children }: PropsCollectionProps): ReactElement {

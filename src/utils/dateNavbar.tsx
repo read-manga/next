@@ -1,17 +1,17 @@
 import { PlayIcon } from "lucide-react";
 
 export interface PropsNavbar {
-  title: string,
-  label?: string,
-  description?: string,
-  icon?: any,
-  list: Array<PropsNavbarList>
+  title: string;
+  label?: string;
+  description?: string;
+  icon?: any;
+  list: Array<PropsNavbarList>;
 };
 
 export interface PropsNavbarList {
-  label: string,
-  text: string,
-  url: string,
+  label: string;
+  text: string;
+  url: string;
 };
 
 export const data: Array<PropsNavbar> = [

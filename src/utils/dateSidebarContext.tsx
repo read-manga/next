@@ -1,19 +1,19 @@
 import { HouseIcon, MessageSquareMoreIcon, User2Icon } from "lucide-react";
 
 export interface PropsItem {
-  name: string,
-  url: string,
+  name: string;
+  url: string;
 };
 
 export interface PropsSub {
-  name: string,
-  Icon: any,
-  items: Array<PropsItem>,
+  name: string;
+  Icon: any;
+  items: Array<PropsItem>;
 }
 
 export interface PropsListContext {
-  name: string,
-  sub: Array<PropsSub>,
+  name: string;
+  sub: Array<PropsSub>;
 }
 
 export const data: Array<PropsListContext> = [
@@ -27,6 +27,10 @@ export const data: Array<PropsListContext> = [
           {
             name: "App",
             url: "/",
+          },
+          {
+            name: "Checker Lain",
+            url: "/checker-lain"
           },
           {
             name: "Termos de Uso",

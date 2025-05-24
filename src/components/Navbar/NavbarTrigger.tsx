@@ -2,7 +2,7 @@ import { NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { ReactElement } from "react";
 
 interface PropsNavbarTrigger {
-  text: string,
+  text: string;
 }
 
 export default function NavbarTrigger({ text }: PropsNavbarTrigger): ReactElement {

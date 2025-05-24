@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 import { Card } from "@/components/ui/card";
 
 interface PropsLoginCard {
-  children: ReactElement,
+  children: ReactElement;
 }
 
 export default function LoginCard({ children }: PropsLoginCard): ReactElement {

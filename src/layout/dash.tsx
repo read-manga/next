@@ -10,7 +10,7 @@ import { ReactElement } from "react";
  */
 interface PropsLayoutApp {
   children: ReactElement[] | ReactElement;
-  context: PropsSidebarContext,
+  context: PropsSidebarContext;
 }
 
 /**
